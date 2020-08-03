@@ -70,7 +70,7 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
                         </div>
                     </div>
                 </div>
-                <a href={details.website_}><img className='screenShot' src={details.screenshot} /></a>
+                <img className='screenShot' src={details.screenshot} />
             </div>
         </div >
     );
