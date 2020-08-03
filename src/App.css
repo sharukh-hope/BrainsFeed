@@ -1,0 +1,149 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.frame{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width:900px;
+  margin: 10px 0px 10px 0px;
+padding: 10px;
+}
+.frame:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.frameHeader{
+  display: flex;
+
+  flex-direction: row;
+}
+.headerText{
+  display: flex;
+  flex-direction:column ;
+}
+.headerLine1{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.headerLine2{
+display: flex;
+}
+.headerLine3{
+  color:#7b91b1;
+  line-height: 1.25;
+  font-size: 11px;
+  font-weight: 500;
+}
+h3{
+  margin-top: 0px;
+}
+
+
+.sociallBtn{
+  display:flex;
+  height:25px;
+  width:25px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 35px;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 3px;
+  border-color: white;
+}
+.btnLink{
+  color:white;
+  text-decoration: none;
+}
+.btnLink:visited,.btnLink:hover{
+  color: White;
+  text-decoration: none;
+}
+
+
+.logo{
+  margin-left: auto; 
+  height: 100px;
+  width:100px;
+}
+.logoIcon{
+  font-size: 15px !important;
+
+}
+.screenShot{
+  height: 250px;
+  width: 300px
+}
+.frameContent{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+table {
+  
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 98%;
+  margin: 5px 0px 5px 0px;
+}
+th{
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+}
+td{
+  font-size: 15px;
+  font-weight: 800;
+
+}
+th, td {
+  padding: 2px;
+  text-align: center;
+}
+th:first-child,td:first-child{ 
+  width:30%;
+  text-align: left;
+  border-right: 3px solid rgb(97, 97, 97);
+  border-radius: 5px;
+}
+.tDivider{
+  border-right: 3px solid rgb(97, 97, 97);
+  border-left: 3px solid rgb(97, 97, 97);
+}
+
+.horizontalContainer{
+  display: flex;
+  flex-direction: row;
+}
+.verticalContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.modalDetails{
+  width: 130vw;
+  padding:10px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  height: fit-content;
+
+}
+
+.infoHeader{
+  margin:10px 0px 10px 0px;
+}
+
+.showText{
+  color: blue;
+  cursor: pointer;
+  font-size: 13px;
+}
+
