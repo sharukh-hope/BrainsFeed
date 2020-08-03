@@ -78,7 +78,7 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
                 </div>
                 <img className='screenShot' onClick={() => setShowimg(true)} src={details.screenshot} />
                 <Modal size="xl" centered show={showimg} onHide={handleClose}>
-                    <Modal.Header closeButton />
+                    <Modal.Header closeButton ><h2>Home page of {details.company_name} </h2></Modal.Header>
                     <Modal.Body>
                         <img className='screenShotLarge' src={details.screenshot} />
                     </Modal.Body>
