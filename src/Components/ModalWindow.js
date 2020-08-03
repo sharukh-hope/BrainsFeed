@@ -4,7 +4,8 @@ import SocialBtn from './SocialBtn';
 import Image from 'react-bootstrap/Image';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import Badge from 'react-bootstrap/Badge';
-import Geocode from "react-geocode";
+import ShowMoreText from 'react-show-more-text';
+// import Geocode from "react-geocode";
 // Geocode.setApiKey("*****");
 // Geocode.fromAddress("Eiffel Tower").then(
 //     response => {
@@ -17,6 +18,9 @@ import Geocode from "react-geocode";
 // );
 
 const ModalWindow = ({ currentCompany }) => {
+    const executeOnClick = (isExpanded) => {
+        console.log(isExpanded);
+    }
     const [show, setShow] = useState(false);
     const [showtext, setShowtext] = useState("show more...");
     const handleMore = () => {
@@ -63,7 +67,16 @@ const ModalWindow = ({ currentCompany }) => {
                             <td> {currentCompany.API_Provided}</td>
                         </tr>
                     </table>
-                    {currentCompany.Long_description}
+                    <ShowMoreText
+                        lines={5}
+                        more='Show more'
+                        less='Show less'
+                        anchorClass=''
+                        onClick={executeOnClick}
+                        width={780}
+                        expanded={false}>
+                        {currentCompany.Long_description}
+                    </ShowMoreText>
                     <a href={currentCompany.website_} ><Image style={{ width: "100%", marginTop: "5px" }} src={currentCompany.screenshot} ></Image></a>
                 </div>
                 <div className="modalDetails">

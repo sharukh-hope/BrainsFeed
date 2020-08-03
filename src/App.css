@@ -126,10 +126,11 @@ th:first-child,td:first-child{
   display: flex;
   flex-direction: column;
   margin: 5px;
+  width:80vw;
 }
 
 .modalDetails{
-  width: 130vw;
+  width: 30vw;
   padding:10px;
   background-color: rgb(241, 241, 241);
   border-radius: 5px;

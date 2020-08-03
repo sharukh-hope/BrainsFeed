@@ -5,7 +5,6 @@ import Badge from 'react-bootstrap/Badge';
 import StarRateIcon from '@material-ui/icons/StarRate';
 
 
-
 const CompanyFrame = ({ details, changeCurentCompany }) => {
     const [show, setShow] = useState(false);
     const [showtext, setShowtext] = useState("show more...");
@@ -22,7 +21,7 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
         <div className='frame'>
             <FrameHeader props={details} />
             <div className='frameContent'>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', width: "550px" }}>
                     {' '}
                     <p>{details.Short_description}</p>
                     <div className='importantInfo'>
@@ -59,11 +58,12 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
 
                             } {!show ? (< text className="showText" onClick={handleMore}>{showtext}</text>) : (
                                 <text className="showText" onClick={handleLess}>{showtext}</text>
-                            )}</div>
-                        <div>
+                            )}
+                        </div>
+                        <div style={{ width: "100%" }}>
                             <Button
                                 onClick={() => changeCurentCompany(details)}
-                                style={{ marginTop: '30px' }}
+                                style={{ marginTop: 'auto', width: "100%" }}
                             >
                                 Learn More
                         </Button>
