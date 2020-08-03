@@ -124,6 +124,7 @@ th:first-child,td:first-child{
 .horizontalContainer{
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 .verticalContainer{
   display: flex;

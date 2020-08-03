@@ -107,7 +107,7 @@ const ModalWindow = ({ currentCompany }) => {
                     <h5 className="infoHeader">Address:</h5>
                     <div className="mapid">
                         {currentCompany.companyAddress}
-                        <Map style={{ height: "200px", width: "300px" }} center={[currentCompany.lat, currentCompany.lat]} zoom={13}>
+                        <Map style={{ height: "200px", width: "100%" }} center={[currentCompany.lat, currentCompany.lat]} zoom={13}>
                             <TileLayer
                                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
