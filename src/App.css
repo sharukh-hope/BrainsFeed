@@ -179,7 +179,7 @@ th:first-child,td:first-child{
 
 }
 
-#leafletmap {
+.leaflet-container {
   height: 200px;
 }
 

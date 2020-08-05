@@ -5,9 +5,25 @@ import Image from 'react-bootstrap/Image';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import Badge from 'react-bootstrap/Badge';
 
+
 import Geocode from "react-geocode";
 
 const ModalWindow = ({ currentCompany }) => {
+    const [el, setEl] = useState("")
+    const getEl = React.useCallback(() => {
+        return (<Map center={coords} doubleClickZoom={true} zoom={15}>
+
+            <Marker position={coords}>
+                <Popup>
+                    {currentCompany.company_name}{"'s "}location
+                </Popup>
+            </Marker>
+            <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+        </Map>);
+    }, [])
     const [coords, setCoords] = useState(["40.708964", "-74.006868"]);
     const [show, setShow] = useState(false);
     const [showtext, setShowtext] = useState("show more...");
@@ -20,8 +36,9 @@ const ModalWindow = ({ currentCompany }) => {
         setShowtext("Show more");
     }
     useEffect(() => {
+        setEl(getEl());
         fetchGeoCode();
-    }, [currentCompany]);
+    }, [currentCompany, getEl]);
 
     const fetchGeoCode = () => {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.mapbox.com/geocoding/v5/mapbox.places/${currentCompany.companyAddress}.json?access_token=pk.eyJ1IjoiYndoYWxlIiwiYSI6ImNrZGdndmNoeTI1ZDIzMXQ5MnB3aGZrcG8ifQ.SPFczC0gl-J9oOoLG58J4Q`).then(response => {
@@ -100,18 +117,8 @@ const ModalWindow = ({ currentCompany }) => {
                     <h5 className="infoHeader">Address:</h5>
 
                     {currentCompany.companyAddress}
-                    <Map style={{ height: "200px", width: "100%" }} center={coords} doubleClickZoom={true} zoom={15}>
+                    {el}
 
-                        <Marker position={coords}>
-                            <Popup>
-                                {currentCompany.company_name}{"'s "}location
-                                </Popup>
-                        </Marker>
-                        <TileLayer
-                            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        />
-                    </Map>
 
                 </div>
 
