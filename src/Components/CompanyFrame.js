@@ -33,14 +33,10 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
 
                     <table>
                         <tr>
-                            <th>Industry</th>
-                            <th>Rating</th>
                             <th className="tDivider">Access</th>
                             <th>API</th>
                         </tr>
                         <tr>
-                            <td >{details.industry}</td>
-                            <td style={{ fontSize: "20px" }}> {details.rating}<StarRateIcon /></td>
                             <td className="tDivider"> {details.paid_not}</td>
                             <td> {details.API_Provided}</td>
                         </tr>
@@ -52,11 +48,11 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
                                 if (!show)
                                     while (index < 3)
                                         return (<>
-                                            <Badge style={{ margin: "2px" }} pill variant="light">
+                                            <Badge style={{ margin: "2px", padding: "9px" }} pill variant="light">
                                                 {ele}
                                             </Badge> </>);
                                 else
-                                    return (<Badge style={{ margin: "2px" }} pill variant="light">
+                                    return (<Badge style={{ margin: "2px", padding: "9px" }} pill variant="light">
                                         {ele}
                                     </Badge>);
 
@@ -69,7 +65,6 @@ const CompanyFrame = ({ details, changeCurentCompany }) => {
                     <div style={{ width: "100%" }}>
                         <Button
                             onClick={() => changeCurentCompany(details)}
-                            style={{ width: "100%" }}
                         >
                             Learn More
                         </Button>

@@ -33,7 +33,7 @@ function App() {
     <div className='App'>
       {Data}
       <Modal size="xl" centered show={show} onHide={handleClose}>
-        <Modal.Header closeButton />
+        {/* <Modal.Header closeButton /> */}
         <Modal.Body>
           {currentCompany && (
             <>

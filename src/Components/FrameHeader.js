@@ -1,9 +1,11 @@
 import React from 'react';
 import SocialBtn from './SocialBtn';
 import Image from 'react-bootstrap/Image';
+import StarRateIcon from '@material-ui/icons/StarRate';
 const FrameHeader = ({ props }) => {
     return (
         <div className='frameHeader'>
+            <Image className='logo' src={props.logo} thumbnail />
             <div className='headerText'>
                 <div className='headerLine1'>
                     <h2>{props.company_name}</h2>
@@ -14,9 +16,17 @@ const FrameHeader = ({ props }) => {
                 <div className='headerLine2'>
                     <h4>{props.title_}</h4>
                 </div>
-                <div className='headerLine3'>{props.type}{" "}|{" "}{props.companySize}</div>
+                <div className='headerLine3'>{props.industry}{" "}|{" "}{props.type}{" "}|{" "}{props.companySize}{" "}|{" "}{props.rating}
+                    <StarRateIcon
+                        style={{
+                            position: "relative", top: "-1px"
+                        }} fontSize="small" />
+                    {/* <svg height="15" width="15" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path style={{ fill: "#7b91b1" }} transform="scale(1.33, 1.33)" d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"></path>
+                    </svg> */}
+                </div>
             </div>
-            <Image className='logo' src={props.logo} thumbnail />
+
         </div>
     );
 };
