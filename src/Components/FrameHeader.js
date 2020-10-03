@@ -5,7 +5,7 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 const FrameHeader = ({ props }) => {
     return (
         <div className='frameHeader'>
-            <Image className='logo' src={props.logo} thumbnail />
+            <Image className='logo' src={props.logo} alt="Logo url broken" thumbnail />
             <div className='headerText'>
                 <div className='headerLine1'>
                     <h2>{props.company_name}</h2>

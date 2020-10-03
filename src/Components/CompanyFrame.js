@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import FrameHeader from './FrameHeader';
 import { Button } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
-import StarRateIcon from '@material-ui/icons/StarRate';
 import { Modal } from 'react-bootstrap';
 
 
